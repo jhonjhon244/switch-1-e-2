@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    char sexo;
+    float peso, peso_ideal;
+
+    printf("Digite o sexo (M/F): ");
+    scanf(" %c", &sexo);
+
+    printf("Digite o peso atual: ");
+    scanf("%f", &peso);
+
+    switch(sexo) {
+        case 'M':
+        case 'm':
+            peso_ideal = (peso - 100) * 0.9;
+            printf("O peso ideal para um homem é: %.2f kg\n", peso_ideal);
+            break;
+        case 'F':
+        case 'f':
+            peso_ideal = (peso - 100) * 0.85;
+            printf("O peso ideal para uma mulher é: %.2f kg\n", peso_ideal);
+            break;
+        default:
+            printf("Opção inválida. Por favor, digite 'M' ou 'F'.\n");
+    }
+
+    return 0;
+}
